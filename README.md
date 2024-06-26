@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on<br>👯 I’m looking to collaborate on<br>🤝 I’m looking for help with<br>🌱 I’m currently learning<br>💬 Ask me about<br>⚡ Fun fact
+I am a passionate programmer with a strong interest in web development. I enjoy learning new technologies and using them to create new projects.
 
 
 # 💻 Tech Stack:
