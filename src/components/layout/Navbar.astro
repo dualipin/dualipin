@@ -1,12 +1,46 @@
+---
+import Instagram from "../../assets/icons/instagram.svg";
+import Github from "../../assets/icons/github.svg";
+import Linkedin from "../../assets/icons/linkedin.svg";
+---
+
 <div
-  class="navbar animate-fade-in backdrop-blur-lg rounded-box border border-base-300 bg-base-100/50 shadow-sm fixed z-50 top-0 max-w-5xl inset-x-4 mx-auto mt-3"
+  class="navbar justify-between animate-fade-in backdrop-blur-lg rounded-box border border-base-300 bg-base-100/50 shadow-sm fixed z-50 top-0 max-w-5xl inset-x-4 mx-auto mt-3"
 >
-  <a
-    class="btn btn-ghost text-xl"
-    href="https://github.com/dualipin/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    dualipin
-  </a>
+  <a class="btn btn-ghost text-xl" href="/"> Martin Sanchez </a>
+
+  <nav>
+    <ul class="flex gap-1">
+      <li>
+        <a
+          class="btn btn-ghost btn-circle"
+          href="https://github.com/dualipin/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github width="24" height="24" class="fill-base-content" />
+        </a>
+      </li>
+      <li>
+        <a
+          class="btn btn-ghost btn-circle"
+          href="https://www.linkedin.com/in/mrtnsnry/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linkedin width="24" height="24" class="fill-base-content" />
+        </a>
+      </li>
+      <li>
+        <a
+          class="btn btn-ghost btn-circle"
+          href="https://www.instagram.com/mrtn_snchz/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Instagram width="24" height="24" class="fill-base-content" />
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
