@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "tailwind-animations";
+@plugin "daisyui";
+@plugin 'tailwind-scrollbar';
+
+@theme {
+  --font-sans: "Geist Sans", ui-sans-serif, system-ui;
+  --font-serif: "Newsreader", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@plugin "daisyui/theme" {
+  name: "oled-magazine";
+  default: true;
+  prefersdark: true;
+  color-scheme: "dark";
+
+  /* FONDO: Negro Puro para OLED (#000000) */
+  --color-base-100: oklch(0% 0 0); 
+  --color-base-200: oklch(8% 0 0); /* Un gris muy oscuro para separar cards */
+  --color-base-300: oklch(12% 0 0);
+  
+  /* TEXTO: Blanco suave para no cansar la vista */
+  --color-base-content: oklch(95% 0.01 260); 
+
+  /* ACENTO: Blanco puro para destacar */
+  --color-primary: oklch(100% 0 0); 
+  --color-primary-content: oklch(0% 0 0);
+
+  /* Bordes y UI */
+  --radius-selector: 0rem; /* Cuadrado total para un look más arquitectónico */
+  --radius-field: 0rem;
+  --radius-box: 0rem;
+  --border: 1px;
+}
+
+/* Aplicando el estilo de revista a los títulos */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
