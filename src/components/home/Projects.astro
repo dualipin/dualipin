@@ -3,48 +3,48 @@ import { Github, ExternalLink } from "@lucide/astro";
 
 const projects = [
   {
-    title: 'The "Python Pro"',
+    title: 'El "Python Pro"',
     description:
-      "Enterprise dashboard combining a performant reactive frontend with a scalable Python backend handling millions of records.",
+      "Dashboard empresarial combinando un frontend reactivo de alto rendimiento con un backend escalable en Python manejando millones de registros.",
     link: "#",
     github: "#",
     architecture: {
       frontend:
-        "Reactive interface built with React. Complex state management handled via modern Hooks and Context.",
+        "Interfaz reactiva construida con React. Gestión de estado complejo manejada mediante Hooks modernos y Context.",
       backend:
-        "Robust API in FastAPI with Pydantic type validation. Efficient queries over PostgreSQL.",
+        "API robusta en FastAPI con validación de tipos Pydantic. Consultas eficientes sobre PostgreSQL.",
       infra:
-        "Deployed on Ubuntu Server (Azure) using Docker compose to ensure environment parity.",
+        "Desplegado en Ubuntu Server (Azure) usando Docker compose para asegurar la paridad de entornos.",
     },
   },
   {
-    title: 'The "Legacy Modernizer"',
+    title: 'El "Legacy Modernizador"',
     description:
-      "Modernization of a legacy monolithic system proving deep understanding of web fundamentals and corporate environments.",
+      "Modernización de un sistema monolítico legacy demostrando un profundo entendimiento de los fundamentos web y entornos corporativos.",
     link: "#",
     github: "#",
     architecture: {
       frontend:
-        "Progressively decoupled UI components managed via Vanilla JS and lightweight libraries.",
+        "Componentes de UI desacoplados progresivamente gestionados mediante Vanilla JS y librerías ligeras.",
       backend:
-        "Refactored PHP/MySQL core. Implemented MVC layer over legacy spaghetti code.",
+        "Core de PHP/MySQL refactorizado. Capa MVC implementada sobre código legacy tipo spaghetti.",
       infra:
-        "Containerized local environment. Automated CI/CD pipeline for safe staging deployments.",
+        "Entorno local containerizado. Pipeline de CI/CD automatizado para despliegues seguros a staging.",
     },
   },
   {
-    title: 'The "SysAdmin"',
+    title: 'El "SysAdmin"',
     description:
-      "Secure and performant infrastructure configuration for hosting multiple decoupled applications.",
+      "Configuración de infraestructura segura y de alto rendimiento para alojar múltiples aplicaciones desacopladas.",
     link: "#",
     github: "#",
     architecture: {
       frontend:
-        "Static assets served optimally via CDN with aggressive caching policies.",
+        "Archivos estáticos servidos óptimamente mediante CDN con políticas agresivas de caché.",
       backend:
-        "Microservices architecture with internal network routing and rate limiting.",
+        "Arquitectura de microservicios con enrutamiento de red interno y limitación de peticiones (rate limiting).",
       infra:
-        "Azure VM configured with Nginx reverse proxy, SSL termination (Certbot), and fail2ban.",
+        "VM en Azure configurada con reverse proxy Nginx, terminación SSL (Certbot) y fail2ban.",
     },
   },
 ];
@@ -54,11 +54,11 @@ const projects = [
   <div class="max-w-5xl mx-auto">
     <div class="mb-16">
       <h2 class="text-3xl md:text-4xl font-sans font-bold tracking-tight mb-4">
-        Featured Architecture
+        Arquitectura Destacada
       </h2>
       <p class="text-base-content/70 font-mono text-sm max-w-xl">
-        Showcasing deep understanding of the full stack, from reactive
-        interfaces to server orchestration.
+        Demostrando un dominio profundo del full stack, desde interfaces reactivas
+        hasta la orquestación de servidores.
       </p>
     </div>
 
@@ -70,7 +70,7 @@ const projects = [
             <div class="mb-8 md:flex justify-between items-end border-b border-base-300 pb-6">
               <div>
                 <div class="text-primary font-mono text-sm mb-2">
-                  Project 0{index + 1}
+                  Proyecto 0{index + 1}
                 </div>
                 <h3 class="text-2xl font-bold">{project.title}</h3>
                 <p class="text-base-content/70 mt-3 max-w-2xl">
@@ -88,7 +88,7 @@ const projects = [
                   href={project.link}
                   class="btn btn-outline btn-sm font-mono text-xs"
                 >
-                  Visit <ExternalLink size={14} class="ml-1" />
+                  Visitar <ExternalLink size={14} class="ml-1" />
                 </a>
               </div>
             </div>

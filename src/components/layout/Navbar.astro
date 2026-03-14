@@ -1,59 +1,52 @@
 ---
-import Instagram from "../../assets/icons/instagram.svg";
-import Github from "../../assets/icons/github.svg";
-import Linkedin from "../../assets/icons/linkedin.svg";
-import { Mail } from "@lucide/astro";
-
 import { SITE } from "../../constants/site";
 ---
 
 <div
-  class="navbar justify-between animate-fade-in backdrop-blur-lg rounded-box border border-base-300 bg-base-100/50 shadow-sm fixed z-50 top-0 max-w-5xl inset-x-4 mx-auto mt-3"
+  class="navbar animate-fade-in-down bg-base-100/50 backdrop-blur-sm shadow-sm fixed top-0 mt-0 rounded-box sm:border border-base-content/10 z-10 w-full sm:w-4xl sm:mt-3 mx-auto inset-x-0"
 >
-  <a class="btn btn-ghost text-xl" href="/"> {SITE.title} </a>
-
-  <nav>
-    <ul class="flex gap-1">
-      <li>
-        <a
-          class="btn btn-ghost btn-circle"
-          href={SITE.github}
-          target="_blank"
-          rel="noopener noreferrer"
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
         >
-          <Github width="24" height="24" class="fill-base-content" />
-        </a>
-      </li>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h8m-8 6h16"></path>
+        </svg>
+      </div>
+      <ul
+        tabindex="-1"
+        class="menu menu-md dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+      >
+        <li><a>Inicio</a></li>
+        <li>
+          <a href="/work">Proyectos</a>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost text-xl">
+      {SITE.title}
+    </a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/">Inicio</a></li>
       <li>
-        <a
-          class="btn btn-ghost btn-circle"
-          href={SITE.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Linkedin width="24" height="24" />
-        </a>
+        <a href="/work">Proyectos</a>
       </li>
-      <li>
-        <a
-          class="btn btn-ghost btn-circle"
-          href={SITE.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Instagram width="24" height="24" class="fill-base-content" />
-        </a>
-      </li>
-      <li>
-        <a
-          class="btn btn-ghost btn-circle"
-          href={`mailto:${SITE.email}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Mail width="24" height="24" />
-        </a>
-      </li>
+      <li><a>Item 3</a></li>
     </ul>
-  </nav>
+  </div>
+  <div class="navbar-end">
+    <a class="btn">Button</a>
+  </div>
 </div>
