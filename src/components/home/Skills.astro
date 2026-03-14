@@ -1,0 +1,67 @@
+---
+const skills = [
+  {
+    category: "Languages",
+    items: [
+      { name: "JavaScript/TS", highlight: true },
+      { name: "Python", highlight: true },
+      { name: "PHP", highlight: false },
+      { name: "SQL", highlight: true },
+    ],
+    icon: "code",
+  },
+  {
+    category: "Frameworks",
+    items: [
+      { name: "React / Astro", highlight: true },
+      { name: "Vue", highlight: false },
+      { name: "Django", highlight: false },
+      { name: "FastAPI", highlight: true },
+      { name: "Express / Node", highlight: true },
+    ],
+    icon: "braces",
+  },
+  {
+    category: "Infrastructure",
+    items: [
+      { name: "Docker", highlight: true },
+      { name: "Azure (VMs)", highlight: true },
+      { name: "Git", highlight: true },
+      { name: "Nginx", highlight: false },
+    ],
+    icon: "server",
+  },
+];
+---
+<section id="skills" class="py-24 px-6 md:px-0">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-12">
+      <h2 class="text-3xl md:text-4xl font-sans font-bold tracking-tight mb-4">
+        Technical Arsenal
+      </h2>
+      <p class="text-base-content/70 font-mono text-sm max-w-xl">
+        T-Shaped skill profile focused on full-stack architecture, strongly typed systems, and robust deployment pipelines.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {skills.map((skillGroup) => (
+        <div class="card bg-base-200/50 border border-base-300 rounded-box p-6 hover:border-primary/50 transition-colors duration-300">
+          <h3 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-base-300 pb-4">
+            <span class="text-primary/80 font-mono">{"//"}</span> {skillGroup.category}
+          </h3>
+          <ul class="space-y-3 font-mono text-sm">
+            {skillGroup.items.map((item) => (
+              <li class="flex items-center gap-2">
+                <span class={`w-1.5 h-1.5 rounded-full ${item.highlight ? 'bg-primary' : 'bg-base-content/30'}`}></span>
+                <span class={item.highlight ? 'text-base-content font-medium' : 'text-base-content/70'}>
+                  {item.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
